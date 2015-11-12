@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:colorControlHighlight">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="?android:colorAccent" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item
+                android:state_enabled="true"
+                android:state_pressed="true"
+                android:drawable="@color/colorPrimaryDark">
+                <objectAnimator
+                    android:duration="@android:integer/config_shortAnimTime"
+                    android:propertyName="translationZ"
+                    android:valueFrom="1dp"
+                    android:valueTo="7dp"
+                    android:valueType="floatType" />
+            </item>
+            <item
+                android:drawable="@color/colorPrimary">
+                <objectAnimator
+                    android:duration="@android:integer/config_shortAnimTime"
+                    android:propertyName="translationZ"
+                    android:valueFrom="7dp"
+                    android:valueTo="1dp"
+                    android:valueType="floatType" />
+            </item>
+        </selector>
+    </item>
+</ripple>
