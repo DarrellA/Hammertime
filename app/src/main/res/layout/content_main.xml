@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_weight=".5"
         android:src="@drawable/ripple_or_grey"
+        android:onClick="onSimple"
         android:clickable="true" />
 
     <FrameLayout

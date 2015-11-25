@@ -21,7 +21,12 @@
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/Shitheme" >
+        </activity>
+        <activity
+            android:name=".SimpleActivity"
+            android:label="@string/title_activity_simple"
+            android:theme="@style/Shitheme" >
         </activity>
     </application>
 
