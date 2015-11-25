@@ -79,6 +79,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onSimple( View v){
         Intent theSimple = new Intent( this, SimpleActivity.class);
-        startActivity( theSimple);
+        startActivity( theSimple );
     }
 }

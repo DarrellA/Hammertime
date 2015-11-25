@@ -19,20 +19,18 @@ public class SimpleActivity extends FragmentActivity  {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_simple);
-        getWindow().setStatusBarColor(Color.RED);
     }
 
     public void onFragClick(View v){
 
        // FirstFragment newFragment = new FirstFragment();
         SecondFragment newFragment = new SecondFragment();
-
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
 // Replace whatever is in the fragment_container view with this fragment,
 // and add the transaction to the back stack so the user can navigate back
         transaction.replace(R.id.damn_fragment, newFragment);
-       // transaction.addToBackStack(null);
+       transaction.addToBackStack(null);
 
 // Commit the transaction
         transaction.commit();

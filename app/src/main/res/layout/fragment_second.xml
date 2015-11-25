@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/hammercontrast"
-    android:fitsSystemWindows="true"
     tools:context="net.aucutt.hammertime.SecondFragment">
 
     <!-- TODO: Update blank fragment layout -->
