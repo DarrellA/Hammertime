@@ -7,6 +7,7 @@ import android.support.v7.internal.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -35,10 +36,15 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.Shitheme);
-        LayoutInflater cloneInflator = inflater.cloneInContext(contextThemeWrapper);
+//        final Context contextThemeWrapper = new ContextThemeWrapper(getActivity(), R.style.Shitheme);
+//        LayoutInflater cloneInflator = inflater.cloneInContext(contextThemeWrapper);
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
-
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TextView textView = (TextView) getActivity().findViewById(R.id.yourText);
+        textView.append( " "  +   getActivity().getWindow().getStatusBarColor() );
+    }
 }

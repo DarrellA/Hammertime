@@ -23,16 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
      //   toolbar.setBackground(getResources().getDrawable(R.color.transparent));
-        System.out.println("fuck " + getWindow().getStatusBarColor()) ;
       //getWindow().setStatusBarColor(  Color.TRANSPARENT);
         Window window = this.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //window.setStatusBarColor(this.getResources().getColor(R.color.transparent));
-        System.out.println(  "fuck "  +   getWindow().getStatusBarColor() ) ;
         FrameLayout frameLayout = (FrameLayout) findViewById( R.id.theframe);
         Drawable d = getResources().getDrawable(R.drawable.ripple_or_grey);
         Drawable f = getResources().getDrawable(R.drawable.hammer);
